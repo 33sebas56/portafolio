@@ -1,0 +1,219 @@
+:root {
+  --primary-red: #6b071a;
+  --secondary-red: #8a0724;
+  --accent-gold: #ffd700;
+  --dark-red: #4a0513;
+  --background-gradient: linear-gradient(135deg, #6b071a 0%, #8a0724 25%, #4a0513 50%, #6b071a 75%, #8a0724 100%);
+}
+
+body {
+  background: var(--background-gradient);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Elementos decorativos del fondo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 10%;
+  left: 15%;
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgba(255, 215, 0, 0.15);
+  border-radius: 50%;
+  z-index: 1;
+  animation: float 6s ease-in-out infinite;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 20%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 50%;
+  z-index: 1;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+/* Estrellas y puntos decorativos */
+.decorative-dots {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--accent-gold);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.dot:nth-child(1) {
+  top: 20%;
+  left: 25%;
+  animation-delay: 0s;
+}
+.dot:nth-child(2) {
+  top: 60%;
+  left: 80%;
+  animation-delay: 1s;
+}
+.dot:nth-child(3) {
+  top: 80%;
+  left: 20%;
+  animation-delay: 2s;
+}
+.dot:nth-child(4) {
+  top: 30%;
+  right: 15%;
+  animation-delay: 0.5s;
+}
+.dot:nth-child(5) {
+  bottom: 40%;
+  left: 70%;
+  animation-delay: 1.5s;
+}
+.dot:nth-child(6) {
+  top: 15%;
+  right: 30%;
+  animation-delay: 0.7s;
+}
+.dot:nth-child(7) {
+  bottom: 20%;
+  right: 40%;
+  animation-delay: 1.2s;
+}
+.dot:nth-child(8) {
+  top: 45%;
+  left: 10%;
+  animation-delay: 0.3s;
+}
+.dot:nth-child(9) {
+  top: 70%;
+  right: 25%;
+  animation-delay: 1.8s;
+}
+.dot:nth-child(10) {
+  bottom: 60%;
+  left: 40%;
+  animation-delay: 2.2s;
+}
+
+/* Estrellas */
+.star {
+  position: absolute;
+  opacity: 0;
+  animation: starTwinkle 4s ease-in-out infinite;
+}
+
+.star:nth-child(1) {
+  top: 25%;
+  left: 15%;
+  animation-delay: 0.5s;
+}
+.star:nth-child(2) {
+  top: 35%;
+  right: 25%;
+  animation-delay: 1.5s;
+}
+.star:nth-child(3) {
+  bottom: 30%;
+  left: 30%;
+  animation-delay: 2.5s;
+}
+.star:nth-child(4) {
+  bottom: 15%;
+  right: 15%;
+  animation-delay: 3.5s;
+}
+.star:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  animation-delay: 0.8s;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes starTwinkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+
+/* Líneas doradas decorativas */
+.golden-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+  width: 100%;
+  opacity: 0.3;
+}
+
+.golden-line:nth-child(1) {
+  top: 15%;
+  animation: lineMove 15s linear infinite;
+}
+
+.golden-line:nth-child(2) {
+  bottom: 25%;
+  animation: lineMove 20s linear infinite reverse;
+}
+
+@keyframes lineMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
