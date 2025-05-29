@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 
 export default function TicTacToe() {
   const [board, setBoard] = useState(Array(9).fill(null))
@@ -19,7 +19,7 @@ export default function TicTacToe() {
     [2, 4, 6], // Diagonales
   ]
 
-  const checkWinner = (currentBoard: (string | null)[]) => {
+  const checkWinner = useCallback((currentBoard: (string | null)[]) => {
     for (const combination of winningCombinations) {
       const [a, b, c] = combination
       if (currentBoard[a] && currentBoard[a] === currentBoard[b] && currentBoard[a] === currentBoard[c]) {
@@ -27,13 +27,13 @@ export default function TicTacToe() {
       }
     }
     return null
-  }
+  }, [winningCombinations])
 
   const isBoardFull = (currentBoard: (string | null)[]) => {
     return currentBoard.every((cell) => cell !== null)
   }
 
-  const getBestMove = (currentBoard: (string | null)[]) => {
+  const getBestMove = useCallback((currentBoard: (string | null)[]) => {
     // Estrategia: siempre bloquear al jugador o ganar si es posible
 
     // 1. Verificar si la IA puede ganar
@@ -75,7 +75,7 @@ export default function TicTacToe() {
       .map((cell, index) => (cell === null ? index : null))
       .filter((val) => val !== null)
     return availableSpots[Math.floor(Math.random() * availableSpots.length)] || 0
-  }
+  }, [checkWinner])
 
   const handleCellClick = (index: number) => {
     if (board[index] || !isPlayerTurn || gameStatus !== "playing") return
@@ -115,7 +115,7 @@ export default function TicTacToe() {
 
       return () => clearTimeout(timer)
     }
-  }, [isPlayerTurn, board, gameStatus])
+  }, [isPlayerTurn, board, gameStatus, getBestMove, checkWinner])
 
   const resetGame = () => {
     setBoard(Array(9).fill(null))
@@ -145,7 +145,7 @@ export default function TicTacToe() {
         <div style={{ maxWidth: "500px", margin: "0 auto", textAlign: "center" }}>
           <p style={{ fontSize: "1.3rem", marginBottom: "1rem", color: "var(--accent-gold)" }}>Tres en Raya</p>
 
-          <p style={{ fontSize: "1.1rem", marginBottom: "2rem", fontStyle: "italic" }}>"Si te gano, ¡contrátame!" 😉</p>
+          <p style={{ fontSize: "1.1rem", marginBottom: "2rem", fontStyle: "italic" }}>&quot;Si te gano, ¡contrátame!&quot; 😉</p>
 
           <div
             className="tictactoe-grid"
