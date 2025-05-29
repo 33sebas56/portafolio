@@ -1,22 +1,22 @@
-/* Header Styles */
+/* Header Styles - Mucho más grande */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(74, 5, 19, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+  background: rgba(45, 3, 9, 0.85);
+  backdrop-filter: blur(15px);
+  border-bottom: 3px solid rgba(255, 215, 0, 0.4);
   padding: 1.2rem 2rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -24,8 +24,8 @@
   font-size: 1.8rem;
   font-weight: bold;
   color: var(--accent-gold);
-  text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-  letter-spacing: 1px;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  letter-spacing: 1.5px;
 }
 
 .nav-links {
@@ -40,24 +40,25 @@
   font-size: 1.1rem;
   transition: all 0.3s ease;
   position: relative;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
+  padding: 0.5rem 0;
 }
 
 .nav-links a:hover {
   color: var(--accent-gold);
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
 }
 
 .nav-links a::after {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -8px;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 3px;
   background: var(--accent-gold);
   transition: width 0.3s ease;
-  box-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
 }
 
 .nav-links a:hover::after {
@@ -69,7 +70,7 @@
   background: none;
   border: none;
   color: var(--accent-gold);
-  font-size: 1.8rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -79,12 +80,12 @@
   top: 80px;
   left: 0;
   right: 0;
-  background: rgba(74, 5, 19, 0.98);
-  backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(255, 215, 0, 0.3);
-  padding: 1.5rem;
+  background: rgba(45, 3, 9, 0.85);
+  backdrop-filter: blur(15px);
+  border-bottom: 3px solid rgba(255, 215, 0, 0.4);
+  padding: 2rem;
   z-index: 999;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
 }
 
 .mobile-menu.open {
@@ -98,22 +99,22 @@
 }
 
 .mobile-menu li {
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   text-align: center;
 }
 
 .mobile-menu a {
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
   transition: all 0.3s ease;
   display: block;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .mobile-menu a:hover {
   color: var(--accent-gold);
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
 }
 
 @keyframes slideDown {
@@ -137,14 +138,14 @@
   min-height: 100vh;
   position: relative;
   z-index: 10;
-  padding-top: 2rem;
+  padding-top: 3rem;
 }
 
 .hero-title {
   font-size: clamp(3rem, 8vw, 7rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 215, 0, 0.3);
   line-height: 1.1;
   letter-spacing: 1px;
 }
@@ -154,7 +155,7 @@
   color: var(--accent-gold);
   margin-bottom: 2.5rem;
   font-weight: 600;
-  text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
   letter-spacing: 1px;
 }
 
@@ -226,7 +227,7 @@
   text-align: center;
   margin-bottom: 4rem;
   color: var(--accent-gold);
-  text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
   letter-spacing: 1px;
 }
 
@@ -248,32 +249,32 @@
 }
 
 .skill-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 215, 0, 0.3);
   border-radius: 15px;
   padding: 2.5rem;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .skill-card:hover {
   transform: translateY(-8px);
   border-color: var(--accent-gold);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 215, 0, 0.3);
 }
 
 /* Footer */
 .footer {
-  background: rgba(74, 5, 19, 0.95);
-  backdrop-filter: blur(10px);
-  border-top: 2px solid rgba(255, 215, 0, 0.3);
+  background: rgba(45, 3, 9, 0.6);
+  backdrop-filter: blur(15px);
+  border-top: 3px solid rgba(255, 215, 0, 0.4);
   padding: 3rem 2rem;
   text-align: center;
   position: relative;
   z-index: 10;
-  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.4);
 }
 
 .footer p {
@@ -285,31 +286,39 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: bold;
   color: var(--accent-gold);
-  opacity: 0.6;
+  opacity: 0.7;
   z-index: 5;
-  text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4);
+  text-shadow: 0 0 25px rgba(255, 215, 0, 0.9), 0 0 50px rgba(255, 215, 0, 0.5);
   animation: glow 3s ease-in-out infinite;
 }
 
 @keyframes glow {
   0%,
   100% {
-    opacity: 0.6;
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4);
+    opacity: 0.7;
+    text-shadow: 0 0 25px rgba(255, 215, 0, 0.9), 0 0 50px rgba(255, 215, 0, 0.5);
   }
   50% {
-    opacity: 0.8;
-    text-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 215, 0, 0.6);
+    opacity: 0.9;
+    text-shadow: 0 0 35px rgba(255, 215, 0, 1), 0 0 70px rgba(255, 215, 0, 0.7);
   }
 }
 
 /* Responsive */
 @media (max-width: 992px) {
+  .header {
+    padding: 1.8rem 2rem;
+  }
+
   .nav-links {
-    gap: 1.5rem;
+    gap: 2rem;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
   }
 
   .section {
@@ -318,6 +327,10 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 1.5rem 1.5rem;
+  }
+
   .nav-links {
     display: none;
   }
@@ -337,7 +350,7 @@
   }
 
   .sr-signature {
-    font-size: 3rem;
+    font-size: 3.5rem;
     bottom: 1.5rem;
     right: 1.5rem;
   }
@@ -349,7 +362,11 @@
 
 @media (max-width: 480px) {
   .header {
-    padding: 1rem 1.5rem;
+    padding: 1.2rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.8rem;
   }
 
   .hero-title {
@@ -370,7 +387,7 @@
   }
 
   .sr-signature {
-    font-size: 2.5rem;
+    font-size: 3rem;
     bottom: 1rem;
     right: 1rem;
   }

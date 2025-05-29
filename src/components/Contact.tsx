@@ -1,35 +1,101 @@
+"use client"
+
+import { Mail, Github, Facebook } from "lucide-react"
+
 export default function Contact() {
   return (
     <section id="contacto" className="section">
       <div className="container">
         <h2 className="section-title">Contacto</h2>
-        <div className="section-content">
-          <p style={{ marginBottom: "2rem" }}>
-            ¿Tienes un proyecto en mente? ¡Me encantaría escuchar sobre él y ver cómo puedo ayudarte!
-          </p>
 
-          <div
-            style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap", marginBottom: "2rem" }}
-          >
-            <div className="skill-card" style={{ minWidth: "250px" }}>
-              <h3 style={{ color: "var(--accent-gold)", marginBottom: "1rem" }}>Email</h3>
-              <p>sebastian.ramos@email.com</p>
-            </div>
+        <div style={{ display: "flex", alignItems: "center", gap: "4rem", maxWidth: "1200px", margin: "0 auto" }}>
+          {/* Lado izquierdo - Mensaje de agradecimiento */}
+          <div style={{ flex: 1, textAlign: "left" }}>
+            <p style={{ fontSize: "1.4rem", lineHeight: 1.7, marginBottom: "2rem" }}>
+              ¿Tienes un proyecto en mente o quieres colaborar? ¡Me encantaría escuchar sobre él!
+            </p>
 
-            <div className="skill-card" style={{ minWidth: "250px" }}>
-              <h3 style={{ color: "var(--accent-gold)", marginBottom: "1rem" }}>LinkedIn</h3>
-              <p>linkedin.com/in/sebastian-ramos</p>
-            </div>
-
-            <div className="skill-card" style={{ minWidth: "250px" }}>
-              <h3 style={{ color: "var(--accent-gold)", marginBottom: "1rem" }}>GitHub</h3>
-              <p>github.com/sebastian-ramos</p>
+            <div
+              style={{
+                background: "rgba(255, 255, 255, 0.05)",
+                backdropFilter: "blur(10px)",
+                border: "1px solid rgba(255, 215, 0, 0.3)",
+                borderRadius: "15px",
+                padding: "2rem",
+                marginBottom: "2rem",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "1.2rem",
+                  lineHeight: 1.6,
+                  color: "var(--accent-gold)",
+                  fontStyle: "italic",
+                }}
+              >
+                "Muchas gracias por interesarte. Si ves algo interesante en mi perfil, me complacería dar el 110% por
+                esa oportunidad."
+              </p>
             </div>
           </div>
 
-          <button className="btn btn-primary" style={{ fontSize: "1.2rem", padding: "1rem 3rem" }}>
-            Enviar Mensaje
-          </button>
+          {/* Lado derecho - Información de contacto asimétrica */}
+          <div style={{ flex: "0 0 400px" }}>
+            <div style={{ display: "grid", gap: "1.5rem", gridTemplateColumns: "1fr", alignItems: "start" }}>
+              {/* Email - Arriba a la izquierda */}
+              <div style={{ justifySelf: "start", width: "280px" }}>
+                <div className="skill-card" style={{ textAlign: "center", padding: "1.5rem" }}>
+                  <Mail size={32} color="var(--accent-gold)" style={{ marginBottom: "0.8rem" }} />
+                  <h3 style={{ color: "var(--accent-gold)", marginBottom: "0.8rem", fontSize: "1.2rem" }}>Email</h3>
+                  <a
+                    href="mailto:sebas-ramos2018@outlook.com"
+                    style={{
+                      color: "white",
+                      fontSize: "0.95rem",
+                      textDecoration: "none",
+                      transition: "color 0.3s ease",
+                    }}
+                    onMouseOver={(e) => (e.currentTarget.style.color = "var(--accent-gold)")}
+                    onMouseOut={(e) => (e.currentTarget.style.color = "white")}
+                  >
+                    sebas-ramos2018@outlook.com
+                  </a>
+                </div>
+              </div>
+
+              {/* GitHub - Centro a la derecha */}
+              <div style={{ justifySelf: "end", width: "280px" }}>
+                <div className="skill-card" style={{ textAlign: "center", padding: "1.5rem" }}>
+                  <Github size={32} color="var(--accent-gold)" style={{ marginBottom: "0.8rem" }} />
+                  <h3 style={{ color: "var(--accent-gold)", marginBottom: "0.8rem", fontSize: "1.2rem" }}>GitHub</h3>
+                  <a
+                    href="https://github.com/33sebas56"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: "white",
+                      fontSize: "0.95rem",
+                      textDecoration: "none",
+                      transition: "color 0.3s ease",
+                    }}
+                    onMouseOver={(e) => (e.currentTarget.style.color = "var(--accent-gold)")}
+                    onMouseOut={(e) => (e.currentTarget.style.color = "white")}
+                  >
+                    github.com/33sebas56
+                  </a>
+                </div>
+              </div>
+
+              {/* Facebook - Abajo centrado */}
+              <div style={{ justifySelf: "center", width: "280px" }}>
+                <div className="skill-card" style={{ textAlign: "center", padding: "1.5rem" }}>
+                  <Facebook size={32} color="var(--accent-gold)" style={{ marginBottom: "0.8rem" }} />
+                  <h3 style={{ color: "var(--accent-gold)", marginBottom: "0.8rem", fontSize: "1.2rem" }}>Facebook</h3>
+                  <p style={{ color: "white", fontSize: "0.95rem" }}>Próximamente</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -6,9 +6,9 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Sebastian Ramos Toro - Desarrollador Full Stack",
+  title: "Sebastian Ramos Toro",
   description:
-    "Portafolio de Sebastian Ramos Toro - Desarrollador Full Stack apasionado por crear experiencias digitales excepcionales",
+    "Portafolio de Sebastian camilo Ramos Toro ",
 }
 
 export default function RootLayout({

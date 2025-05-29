@@ -1,19 +1,45 @@
+"use client"
+
+import Image from "next/image"
+
 export default function About() {
   return (
-    <section id="quien-soy" className="section">
+    <section id="sobre-mi" className="section">
       <div className="container">
-        <h2 className="section-title">Quien Soy</h2>
-        <div className="section-content">
-          <p>
-            Soy un desarrollador Full Stack con pasión por crear soluciones digitales innovadoras. Me especializo en
-            tecnologías modernas como React, Next.js, Node.js y bases de datos tanto relacionales como NoSQL.
-          </p>
-          <br />
-          <p>
-            Mi enfoque se centra en escribir código limpio, escalable y mantenible, siempre buscando las mejores
-            prácticas y las últimas tendencias en desarrollo web. Me encanta trabajar en equipo y enfrentar nuevos
-            desafíos que me permitan crecer profesionalmente.
-          </p>
+        <h2 className="section-title">Sobre Mí</h2>
+        <div style={{ display: "flex", alignItems: "center", gap: "4rem", maxWidth: "1000px", margin: "0 auto" }}>
+          <div style={{ flex: "0 0 250px" }}>
+            <div
+              style={{
+                position: "relative",
+                width: "250px",
+                height: "300px",
+                borderRadius: "15px",
+                overflow: "hidden",
+                border: "2px solid var(--accent-gold)",
+                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
+              }}
+            >
+              <Image src="/foto_2.jpg" alt="Sebastian trabajando" fill style={{ objectFit: "cover" }} />
+            </div>
+          </div>
+
+          <div style={{ flex: 1, textAlign: "left" }}>
+            <p style={{ fontSize: "1.2rem", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+              Soy un estudiante apasionado por la tecnología y el desarrollo de software. Mi enfoque principal está en
+              crear experiencias digitales que no solo funcionen bien, sino que también sean intuitivas y atractivas
+              para los usuarios.
+            </p>
+            <p style={{ fontSize: "1.2rem", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+              Me especializo en el diseño de interfaces de usuario y la planificación de software centrado en la
+              experiencia del usuario. Disfruto trabajando tanto en el frontend como en el backend, siempre buscando las
+              mejores prácticas y tecnologías modernas.
+            </p>
+            <p style={{ fontSize: "1.2rem", lineHeight: 1.8 }}>
+              Cuando no estoy programando, me gusta explorar nuevas tecnologías, aprender sobre diseño UX/UI y
+              contribuir a proyectos que puedan hacer una diferencia positiva.
+            </p>
+          </div>
         </div>
       </div>
     </section>

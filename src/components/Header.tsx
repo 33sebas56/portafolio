@@ -43,13 +43,24 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="#quien-soy"
+                href="#sobre-mi"
                 onClick={(e) => {
                   e.preventDefault()
-                  scrollToSection("quien-soy")
+                  scrollToSection("sobre-mi")
                 }}
               >
-                Quien Soy
+                Sobre Mí
+              </a>
+            </li>
+            <li>
+              <a
+                href="#habilidades"
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToSection("habilidades")
+                }}
+              >
+                Habilidades
               </a>
             </li>
             <li>
@@ -72,17 +83,6 @@ export default function Header() {
                 }}
               >
                 Proyectos
-              </a>
-            </li>
-            <li>
-              <a
-                href="#skills"
-                onClick={(e) => {
-                  e.preventDefault()
-                  scrollToSection("skills")
-                }}
-              >
-                Skills
               </a>
             </li>
             <li>
@@ -122,13 +122,24 @@ export default function Header() {
           </li>
           <li>
             <a
-              href="#quien-soy"
+              href="#sobre-mi"
               onClick={(e) => {
                 e.preventDefault()
-                scrollToSection("quien-soy")
+                scrollToSection("sobre-mi")
               }}
             >
-              Quien Soy
+              Sobre Mí
+            </a>
+          </li>
+          <li>
+            <a
+              href="#habilidades"
+              onClick={(e) => {
+                e.preventDefault()
+                scrollToSection("habilidades")
+              }}
+            >
+              Habilidades
             </a>
           </li>
           <li>
@@ -151,17 +162,6 @@ export default function Header() {
               }}
             >
               Proyectos
-            </a>
-          </li>
-          <li>
-            <a
-              href="#skills"
-              onClick={(e) => {
-                e.preventDefault()
-                scrollToSection("skills")
-              }}
-            >
-              Skills
             </a>
           </li>
           <li>
