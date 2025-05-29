@@ -87,6 +87,17 @@ export default function Header() {
             </li>
             <li>
               <a
+                href="#juguemos"
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToSection("juguemos")
+                }}
+              >
+                Juguemos
+              </a>
+            </li>
+            <li>
+              <a
                 href="#contacto"
                 onClick={(e) => {
                   e.preventDefault()
@@ -162,6 +173,17 @@ export default function Header() {
               }}
             >
               Proyectos
+            </a>
+          </li>
+          <li>
+            <a
+              href="#juguemos"
+              onClick={(e) => {
+                e.preventDefault()
+                scrollToSection("juguemos")
+              }}
+            >
+              Juguemos
             </a>
           </li>
           <li>

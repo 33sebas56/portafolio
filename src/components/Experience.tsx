@@ -1,41 +1,87 @@
+"use client"
+
+import { useState } from "react"
+
+// Definir los tipos para las experiencias
+interface AcademicExperience {
+  title: string
+  institution: string
+  period: string
+  description: string
+}
+
+interface WorkExperience {
+  title: string
+  company: string
+  period: string
+  description: string
+}
+
 export default function Experience() {
-  const experiences = [
-    {
-      title: "Desarrollador Full Stack",
-      company: "Empresa Tecnológica",
-      period: "2023 - Presente",
-      description:
-        "Desarrollo de aplicaciones web modernas utilizando React, Next.js y Node.js. Implementación de arquitecturas escalables y optimización de rendimiento.",
-    },
-    {
-      title: "Desarrollador Frontend",
-      company: "Startup Digital",
-      period: "2022 - 2023",
-      description:
-        "Creación de interfaces de usuario responsivas y accesibles. Colaboración estrecha con diseñadores UX/UI para implementar experiencias excepcionales.",
-    },
-    {
-      title: "Desarrollador Junior",
-      company: "Agencia Web",
-      period: "2021 - 2022",
-      description:
-        "Desarrollo de sitios web corporativos y e-commerce. Aprendizaje de mejores prácticas en desarrollo web y trabajo en equipo.",
-    },
-  ]
+  const [activeTab, setActiveTab] = useState("academica")
+
+  const experiences = {
+    academica: [
+      {
+        title: "Ingeniería de Software",
+        institution: "Universidad",
+        period: "2023 - Sin terminar",
+        description:
+          "Mi mayor centro de conocimientos aún está en progreso, faltando 3 semestres por completar. He descubierto algo más que un futuro trabajo, sino una pasión por la creación de software. Espero continuar mis estudios en esta área.",
+      },
+    ] as AcademicExperience[],
+    laboral: [
+      {
+        title: "Experiencia Laboral",
+        company: "En búsqueda de oportunidades",
+        period: "Presencial, a distancia, tiempo completo o medio tiempo",
+        description:
+          "Aún estoy en ello. Buscando mi primera oportunidad laboral para aplicar mis conocimientos y seguir creciendo profesionalmente.",
+      },
+    ] as WorkExperience[],
+  }
 
   return (
     <section id="experiencia" className="section">
       <div className="container">
         <h2 className="section-title">Experiencia</h2>
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          {experiences.map((exp, index) => (
-            <div key={index} className="skill-card" style={{ marginBottom: "2rem", textAlign: "left" }}>
-              <h3 style={{ color: "var(--accent-gold)", fontSize: "1.5rem", marginBottom: "0.5rem" }}>{exp.title}</h3>
-              <h4 style={{ fontSize: "1.2rem", marginBottom: "0.5rem", opacity: 0.9 }}>{exp.company}</h4>
-              <p style={{ color: "var(--accent-gold)", marginBottom: "1rem", fontSize: "0.9rem" }}>{exp.period}</p>
-              <p style={{ lineHeight: 1.6 }}>{exp.description}</p>
-            </div>
-          ))}
+
+        {/* Botones de tabs - Responsive */}
+        <div className="experience-tabs">
+          <button
+            onClick={() => setActiveTab("academica")}
+            className={`tab-button ${activeTab === "academica" ? "active" : ""}`}
+          >
+            Académica
+          </button>
+          <button
+            onClick={() => setActiveTab("laboral")}
+            className={`tab-button ${activeTab === "laboral" ? "active" : ""}`}
+          >
+            Laboral
+          </button>
+        </div>
+
+        {/* Contenido de experiencias */}
+        <div className="experience-content">
+          {activeTab === "academica" &&
+            experiences.academica.map((exp, index) => (
+              <div key={index} className="experience-card">
+                <h3 className="experience-title">{exp.title}</h3>
+                <h4 className="experience-institution">{exp.institution}</h4>
+                <p className="experience-period">{exp.period}</p>
+                <p className="experience-description">{exp.description}</p>
+              </div>
+            ))}
+          {activeTab === "laboral" &&
+            experiences.laboral.map((exp, index) => (
+              <div key={index} className="experience-card">
+                <h3 className="experience-title">{exp.title}</h3>
+                <h4 className="experience-institution">{exp.company}</h4>
+                <p className="experience-period">{exp.period}</p>
+                <p className="experience-description">{exp.description}</p>
+              </div>
+            ))}
         </div>
       </div>
     </section>

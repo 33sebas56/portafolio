@@ -8,9 +8,12 @@ export default function Contact() {
       <div className="container">
         <h2 className="section-title">Contacto</h2>
 
-        <div style={{ display: "flex", alignItems: "center", gap: "4rem", maxWidth: "1200px", margin: "0 auto" }}>
+        <div
+          className="contact-container"
+          style={{ display: "flex", alignItems: "center", gap: "4rem", maxWidth: "1200px", margin: "0 auto" }}
+        >
           {/* Lado izquierdo - Mensaje de agradecimiento */}
-          <div style={{ flex: 1, textAlign: "left" }}>
+          <div className="contact-left" style={{ flex: 1, textAlign: "left" }}>
             <p style={{ fontSize: "1.4rem", lineHeight: 1.7, marginBottom: "2rem" }}>
               ¿Tienes un proyecto en mente o quieres colaborar? ¡Me encantaría escuchar sobre él!
             </p>
@@ -33,14 +36,14 @@ export default function Contact() {
                   fontStyle: "italic",
                 }}
               >
-                {'"'}Muchas gracias por interesarte. Si ves algo interesante en mi perfil, me complacería dar el 110% por
-                esa oportunidad.{'"'}
+                "Muchas gracias por interesarte. Si ves algo interesante en mi perfil, me complacería dar el 110% por
+                esa oportunidad."
               </p>
             </div>
           </div>
 
           {/* Lado derecho - Información de contacto asimétrica */}
-          <div style={{ flex: "0 0 400px" }}>
+          <div className="contact-right" style={{ flex: "0 0 400px" }}>
             <div style={{ display: "grid", gap: "1.5rem", gridTemplateColumns: "1fr", alignItems: "start" }}>
               {/* Email - Arriba a la izquierda */}
               <div style={{ justifySelf: "start", width: "280px" }}>

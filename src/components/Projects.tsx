@@ -22,7 +22,7 @@ export default function Projects() {
     <section id="proyectos" className="section">
       <div className="container">
         <h2 className="section-title">Proyectos</h2>
-        <div className="skills-grid">
+        <div className="projects-grid skills-grid">
           {projects.map((project, index) => (
             <div key={index} className="skill-card" style={{ textAlign: "left" }}>
               <h3 style={{ color: "var(--accent-gold)", fontSize: "1.5rem", marginBottom: "1rem" }}>{project.title}</h3>

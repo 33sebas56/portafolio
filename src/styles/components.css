@@ -1,4 +1,4 @@
-/* Header Styles - Mucho más grande */
+/* Header Styles */
 .header {
   position: fixed;
   top: 0;
@@ -30,7 +30,7 @@
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   list-style: none;
 }
 
@@ -80,7 +80,7 @@
   top: 80px;
   left: 0;
   right: 0;
-  background: rgba(45, 3, 9, 0.85);
+  background: rgba(45, 3, 9, 0.95);
   backdrop-filter: blur(15px);
   border-bottom: 3px solid rgba(255, 215, 0, 0.4);
   padding: 2rem;
@@ -99,17 +99,17 @@
 }
 
 .mobile-menu li {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   text-align: center;
 }
 
 .mobile-menu a {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
   transition: all 0.3s ease;
   display: block;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 .mobile-menu a:hover {
@@ -138,7 +138,7 @@
   min-height: 100vh;
   position: relative;
   z-index: 10;
-  padding-top: 3rem;
+  padding: 3rem 2rem;
 }
 
 .hero-title {
@@ -151,7 +151,7 @@
 }
 
 .hero-subtitle {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   color: var(--accent-gold);
   margin-bottom: 2.5rem;
   font-weight: 600;
@@ -160,7 +160,7 @@
 }
 
 .hero-description {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
   max-width: 900px;
   margin-bottom: 4rem;
   line-height: 1.7;
@@ -223,7 +223,7 @@
 }
 
 .section-title {
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
   text-align: center;
   margin-bottom: 4rem;
   color: var(--accent-gold);
@@ -235,9 +235,91 @@
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.8;
   letter-spacing: 0.5px;
+}
+
+/* Experience Styles */
+.experience-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  border: 2px solid var(--accent-gold);
+  background: transparent;
+  color: var(--accent-gold);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.tab-button.active {
+  background: var(--accent-gold);
+  color: var(--dark-red);
+}
+
+.tab-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.experience-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 15px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-gold);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 215, 0, 0.3);
+}
+
+.experience-title {
+  color: var(--accent-gold);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.experience-institution {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+  color: white;
+}
+
+.experience-period {
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  font-weight: 500;
+}
+
+.experience-description {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 /* Skills Grid */
@@ -278,7 +360,7 @@
 }
 
 .footer p {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
   letter-spacing: 0.5px;
 }
 
@@ -286,7 +368,7 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  font-size: 4.5rem;
+  font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: bold;
   color: var(--accent-gold);
   opacity: 0.7;
@@ -307,28 +389,111 @@
   }
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .header {
-    padding: 1.8rem 2rem;
-  }
+/* RESPONSIVE BREAKPOINTS */
 
-  .nav-links {
-    gap: 2rem;
-  }
-
-  .nav-links a {
-    font-size: 1.2rem;
-  }
-
+/* Large Tablets and Small Desktops */
+@media (max-width: 1200px) {
   .section {
     padding: 6rem 2rem;
   }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
 }
 
+/* Tablets */
+@media (max-width: 992px) {
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 5rem 2rem;
+  }
+
+  /* Hero responsive */
+  .hero > div {
+    flex-direction: column !important;
+    gap: 3rem !important;
+    text-align: center !important;
+  }
+
+  .hero > div > div:first-child {
+    text-align: center !important;
+  }
+
+  .hero > div > div:first-child h1 {
+    text-align: center !important;
+  }
+
+  .hero > div > div:first-child p {
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+
+  /* About section responsive */
+  .about-container {
+    flex-direction: column !important;
+    gap: 2rem !important;
+    text-align: center !important;
+  }
+
+  .about-image {
+    flex: none !important;
+    align-self: center !important;
+  }
+
+  .about-content {
+    text-align: center !important;
+  }
+
+  /* Contact section responsive */
+  .contact-container {
+    flex-direction: column !important;
+    gap: 3rem !important;
+    text-align: center !important;
+  }
+
+  .contact-left {
+    text-align: center !important;
+  }
+
+  .contact-right {
+    flex: none !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Skills responsive */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-card {
+    padding: 2rem;
+  }
+
+  /* Experience responsive */
+  .experience-card {
+    padding: 2rem;
+  }
+}
+
+/* Mobile Landscape and Small Tablets */
 @media (max-width: 768px) {
   .header {
-    padding: 1.5rem 1.5rem;
+    padding: 1.2rem 1.5rem;
   }
 
   .nav-links {
@@ -339,6 +504,91 @@
     display: block;
   }
 
+  .section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-title {
+    margin-bottom: 3rem;
+  }
+
+  /* Hero mobile */
+  .hero {
+    padding: 2rem 1.5rem;
+    min-height: 90vh;
+  }
+
+  .hero > div > div:last-child {
+    flex: 0 0 250px !important;
+  }
+
+  .hero > div > div:last-child > div {
+    width: 250px !important;
+    height: 250px !important;
+  }
+
+  /* About mobile */
+  .about-image > div {
+    width: 200px !important;
+    height: 240px !important;
+  }
+
+  /* Skills mobile */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .skill-card {
+    padding: 1.5rem;
+  }
+
+  /* Experience mobile */
+  .experience-tabs {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .tab-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    min-width: 100px;
+  }
+
+  .experience-card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Contact mobile */
+  .contact-right > div {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .contact-right > div > div {
+    justify-self: center !important;
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+
+  /* TicTacToe mobile */
+  .tictactoe-grid {
+    max-width: 250px !important;
+  }
+
+  .tictactoe-cell {
+    width: 70px !important;
+    height: 70px !important;
+    font-size: 1.5rem !important;
+  }
+
+  /* Projects mobile */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Buttons mobile */
   .hero-buttons {
     flex-direction: column;
     align-items: center;
@@ -347,57 +597,163 @@
 
   .btn {
     width: 250px;
-  }
-
-  .sr-signature {
-    font-size: 3.5rem;
-    bottom: 1.5rem;
-    right: 1.5rem;
-  }
-
-  .section-title {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .header {
-    padding: 1.2rem 1rem;
-  }
-
-  .logo {
-    font-size: 1.8rem;
-  }
-
-  .hero-title {
-    font-size: clamp(2.5rem, 8vw, 4rem);
-  }
-
-  .hero-subtitle {
-    font-size: 1.5rem;
-  }
-
-  .hero-description {
-    font-size: 1.1rem;
-  }
-
-  .btn {
     padding: 1rem 2rem;
     font-size: 1.1rem;
   }
 
   .sr-signature {
-    font-size: 3rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    margin-bottom: 2.5rem;
+  }
+
+  /* Hero mobile small */
+  .hero {
+    padding: 1.5rem 1rem;
+    min-height: 85vh;
+  }
+
+  .hero > div > div:last-child {
+    flex: 0 0 200px !important;
+  }
+
+  .hero > div > div:last-child > div {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  /* About mobile small */
+  .about-image > div {
+    width: 180px !important;
+    height: 220px !important;
+  }
+
+  /* Skills mobile small */
+  .skill-card {
+    padding: 1.2rem;
+  }
+
+  /* Experience mobile small */
+  .experience-tabs {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .tab-button {
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+    width: 200px;
+  }
+
+  .experience-card {
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  /* Contact mobile small */
+  .contact-left {
+    padding: 0 !important;
+  }
+
+  .contact-right > div > div {
+    max-width: 280px !important;
+  }
+
+  /* TicTacToe mobile small */
+  .tictactoe-grid {
+    max-width: 220px !important;
+  }
+
+  .tictactoe-cell {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 1.3rem !important;
+  }
+
+  /* Buttons mobile small */
+  .btn {
+    width: 220px;
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+  }
+
+  .sr-signature {
     bottom: 1rem;
     right: 1rem;
   }
 
+  /* Footer mobile small */
+  .footer {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
   .section {
-    padding: 5rem 1.5rem;
+    padding: 2.5rem 0.8rem;
   }
 
-  .section-title {
-    font-size: 2.3rem;
-    margin-bottom: 3rem;
+  .hero {
+    padding: 1rem 0.8rem;
+  }
+
+  .hero > div > div:last-child > div {
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  .about-image > div {
+    width: 160px !important;
+    height: 200px !important;
+  }
+
+  .skill-card {
+    padding: 1rem;
+  }
+
+  .experience-card {
+    padding: 1rem;
+  }
+
+  .tab-button {
+    width: 180px;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .btn {
+    width: 200px;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .tictactoe-grid {
+    max-width: 200px !important;
+  }
+
+  .tictactoe-cell {
+    width: 55px !important;
+    height: 55px !important;
+    font-size: 1.2rem !important;
   }
 }
