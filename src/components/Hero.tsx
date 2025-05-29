@@ -3,13 +3,6 @@
 import Image from "next/image"
 
 export default function Hero() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   return (
     <section id="inicio" className="hero">
       {/* Río dorado */}
@@ -113,7 +106,7 @@ export default function Hero() {
             ¡Hola! Soy Sebastian
           </h1>
           <p className="hero-subtitle" style={{ textAlign: "left" }}>
-            {"<SR.ramos>"}
+            {"{<SR.ramos>}"}
           </p>
           <p className="hero-description" style={{ textAlign: "left", maxWidth: "600px" }}>
             Estudiante de Ingeniería de Software enfocado en el <strong>diseño de experiencias de usuario</strong> y{" "}

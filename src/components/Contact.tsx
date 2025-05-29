@@ -33,8 +33,8 @@ export default function Contact() {
                   fontStyle: "italic",
                 }}
               >
-                "Muchas gracias por interesarte. Si ves algo interesante en mi perfil, me complacería dar el 110% por
-                esa oportunidad."
+                {'"'}Muchas gracias por interesarte. Si ves algo interesante en mi perfil, me complacería dar el 110% por
+                esa oportunidad.{'"'}
               </p>
             </div>
           </div>
