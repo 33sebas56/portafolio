@@ -100,62 +100,19 @@ export default function Hero() {
         <div className="golden-accent"></div>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "4rem",
-          maxWidth: "1200px",
-          margin: "0 auto",
-          position: "relative",
-          zIndex: 15,
-        }}
-      >
-        <div style={{ flex: 1, textAlign: "left" }}>
-          <h1
-            style={{
-              fontSize: "clamp(2.5rem, 6vw, 5rem)",
-              fontWeight: 700,
-              marginBottom: "2rem",
-              textShadow: "3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 215, 0, 0.3)",
-              lineHeight: 1.1,
-              letterSpacing: "1px",
-              textAlign: "left",
-              color: "white",
-            }}
-          >
-            ¡Hola! Soy Sebastian
-          </h1>
+      <div className="hero-content">
+        <div className="hero-text">
+          <h1 className="hero-title">¡Hola! Soy Sebastian</h1>
 
-          <p
-            style={{
-              textAlign: "left",
-              maxWidth: "600px",
-              fontSize: "1.3rem",
-              lineHeight: 1.7,
-              opacity: 0.95,
-              letterSpacing: "0.5px",
-            }}
-          >
+          <p className="hero-description">
             Estudiante de Ingeniería de Software enfocado en las <strong>experiencias de usuario</strong> y{" "}
-            <strong>desarrollo de interfaces intuitivas</strong>. Me estoy especializando en planificar y presentar software que
+            <strong>desarrollo de interfaces intuitivas</strong>. Me especializo en planificar y presentar software que
             priorice la experiencia del usuario, combinando funcionalidad con buenas prácticas.
           </p>
         </div>
 
-        <div style={{ flex: "0 0 300px", position: "relative", zIndex: 20 }}>
-          <div
-            style={{
-              position: "relative",
-              width: "300px",
-              height: "300px",
-              borderRadius: "50%",
-              overflow: "hidden",
-              border: "4px solid var(--accent-gold)",
-              boxShadow: "0 0 30px rgba(255, 215, 0, 0.4)",
-              zIndex: 20,
-            }}
-          >
+        <div className="hero-image">
+          <div className="image-container">
             <Image src="/foto_1.jpg" alt="Sebastian Ramos Toro" fill style={{ objectFit: "cover" }} priority />
           </div>
         </div>

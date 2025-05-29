@@ -12,10 +12,10 @@ export default function Contact() {
           className="contact-container"
           style={{ display: "flex", alignItems: "center", gap: "4rem", maxWidth: "1200px", margin: "0 auto" }}
         >
-          {/* Lado izquierdo - Mensaje de agradecimiento */}
+
           <div className="contact-left" style={{ flex: 1, textAlign: "left" }}>
             <p style={{ fontSize: "1.4rem", lineHeight: 1.7, marginBottom: "2rem" }}>
-              ¿Tienes un proyecto en mente o quieres colaborar? ¡Me encantaría escuchar sobre él!
+              ¿Tienes un proyecto en mente y no sabes como implementarlo? ¡Me encantaría escuchar sobre él!
             </p>
 
             <div
@@ -30,22 +30,20 @@ export default function Contact() {
             >
               <p
                 style={{
-                  fontSize: "1.2rem",
+                  fontSize: "1.2rem", 
                   lineHeight: 1.6,
                   color: "var(--accent-gold)",
                   fontStyle: "italic",
                 }}
               >
-                &quot;Muchas gracias por interesarte. Si ves algo interesante en mi perfil, me complacería dar el 110% por
+                &quot;Muchas gracias por interesarte. Si encuentras una posible conexion a tu proyecto o equipo, me complacería dar el 110% por
                 esa oportunidad.&quot;
               </p>
             </div>
           </div>
 
-          {/* Lado derecho - Información de contacto asimétrica */}
           <div className="contact-right" style={{ flex: "0 0 400px" }}>
             <div style={{ display: "grid", gap: "1.5rem", gridTemplateColumns: "1fr", alignItems: "start" }}>
-              {/* Email - Arriba a la izquierda */}
               <div style={{ justifySelf: "start", width: "280px" }}>
                 <div className="skill-card" style={{ textAlign: "center", padding: "1.5rem" }}>
                   <Mail size={32} color="var(--accent-gold)" style={{ marginBottom: "0.8rem" }} />
@@ -66,7 +64,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* GitHub - Centro a la derecha */}
               <div style={{ justifySelf: "end", width: "280px" }}>
                 <div className="skill-card" style={{ textAlign: "center", padding: "1.5rem" }}>
                   <Github size={32} color="var(--accent-gold)" style={{ marginBottom: "0.8rem" }} />
@@ -89,7 +86,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Facebook - Abajo centrado */}
               <div style={{ justifySelf: "center", width: "280px" }}>
                 <div className="skill-card" style={{ textAlign: "center", padding: "1.5rem" }}>
                   <Facebook size={32} color="var(--accent-gold)" style={{ marginBottom: "0.8rem" }} />
